@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- config.xml -->
+<config>
+  <modules>
+    <ETeng_Cart>
+      <version>0.1.0</version>
+    </ETeng_Cart>
+  </modules>
+
+  <frontend>
+    <routers>
+      <cart>
+        <use>standard</use>
+        <args>
+          <module>ETeng_Cart</module>
+          <frontName>cart</frontName>
+        </args>
+      </cart>
+    </routers>
+  </frontend>
+</config>

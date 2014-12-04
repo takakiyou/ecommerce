@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- config.xml -->
+<config>
+  <modules>
+    <ETeng_Customers>
+      <version>0.1.0</version>
+    </ETeng_Customers>
+  </modules>
+
+  <frontend>
+    <routers>
+      <customers>
+        <use>standard</use>
+        <args>
+          <module>ETeng_Customers</module>
+          <frontName>account</frontName>
+        </args>
+      </customers>
+    </routers>
+  </frontend>
+</config>

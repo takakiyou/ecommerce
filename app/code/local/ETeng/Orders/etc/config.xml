@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <ETeng_Orders>
+      <version>0.1.0</version>
+    </ETeng_Orders>
+  </modules>
+
+  <global>
+    <models>
+      <orders>
+        <class>ETeng_Orders_Model</class>
+      </orders>
+    </models>
+  </global>
+
+  <frontend>
+    <routers>
+      <orders>
+        <use>standard</use>
+        <args>
+          <module>ETeng_Orders</module>
+          <frontName>orders</frontName>.
+        </args>
+      </orders>
+    </routers>
+  </frontend>
+</config>

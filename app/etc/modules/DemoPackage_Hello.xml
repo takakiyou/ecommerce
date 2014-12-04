@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- Magentotutorial_Helloworld.xml -->
+<config>
+  <modules>
+    <DemoPackage_Hello>
+      <active>true</active>
+      <codePool>local</codePool>
+    </DemoPackage_Hello>
+  </modules>
+  <global>
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <DemoPackage_hello_model_observer>
+                        <type>singleton</type>
+                        <class>DemoPackage_Hello_Model_Observer</class>
+                        <method>checkForConfigRequest</method>
+                    </DemoPackage_hello_model_observer>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+    </global>
+</config>

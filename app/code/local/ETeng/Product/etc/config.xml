@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- config.xml -->
+<config>
+  <modules>
+    <ETeng_Product>
+      <version>0.1.0</version>
+    </ETeng_Product>
+  </modules>
+  <frontend>
+    <routers>
+      <Product>
+        <use>standard</use>
+        <args>
+          <module>ETeng_Product</module>
+          <frontName>product</frontName>
+        </args>
+      </Product>
+    </routers>
+  </frontend>
+</config>

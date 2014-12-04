@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- ETeng_Customer -->
+<config>
+  <modules>
+    <ETeng_Customers>
+      <active>true</active>
+      <codePool>local</codePool>
+    </ETeng_Customers>
+  </modules>
+</config>

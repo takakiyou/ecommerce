@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <ETeng_Address>
+      <version>0.1.0</version>
+    </ETeng_Address>
+  </modules>
+  <frontend>
+    <routers>
+      <address>
+        <use>standard</use>
+        <args>
+          <module>ETeng_Address</module>
+          <frontName>address</frontName>
+        </args>
+      </address>
+    </routers>
+  </frontend>
+</config>

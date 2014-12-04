@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!--
+/**
+// Copyright (c) Mercent Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+// PARTICULAR PURPOSE.
+// Author: Tara Goshi and Kathy Farah
+// Date: 2012-04-10
+// Summary: Integrates Magento Sites with Mercent Retail Price Optimizer
+// SCOPE OF LICENSE
+// The software is licensed, not sold. This agreement only gives you some rights to use the software. Mercent reserves all other rights.
+// You may not 
+// * reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
+// * publish the software for others to copy;
+// * rent, lease or lend the software;
+// * transfer the software or this agreement to any third party; or
+// * use the software for commercial software hosting services.
+*/
+-->
+<config>
+    <tabs>
+        <mercent_tab translate="label">
+            <label>Mercent Retail</label>
+            <sort_order>350</sort_order>
+        </mercent_tab>
+    </tabs>
+    <sections>
+        <repricingconfig translate="label">
+            <label>Mercent Price Optimizer</label>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mercent_tab</tab>
+            <groups>
+                <repricing_group translate="label">
+                    <label>Price Optimizer FTP Settings</label>
+                    <comment>Before you can configure the Mercent Price Optimizer extension for Magento, you need to request a &lt;a href="https://secure.mercent.com/Public/Provision/Repricing/SetupRequest.aspx" target="_blank"&gt;Mercent Price Optimizer account&lt;/a&gt;. For instructions on setting up the extension, see &lt;a href="https://secure.mercent.com/Public/Provision/Repricing/SetUp.pdf" target="_blank"&gt;SettingUp.pdf&lt;/a&gt;. For an introduction on using the Mercent Marketplace Price Optimizer tools in Mercent Retail, see &lt;a href="https://secure.mercent.com/Public/Provision/Repricing/GettingStarted.pdf" target="_blank"&gt;GettingStarted.pdf&lt;/a&gt;. Once you have your credentials, you can login to Mercent Retail at &lt;a href="https://secure.mercent.com" target="_blank"&gt;https://secure.mercent.com&lt;/a&gt;.</comment>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <repricing_active translate="label">
+                            <label>Generate Feed</label>
+                            <comment>To generate feed for a specific store, set "Current Configuration Scope"</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </repricing_active>
+                        <repricing_account translate="label">
+                            <label>Merchant ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </repricing_account>
+                        <repricing_ftpserver translate="label">
+                            <label>FTP Server</label>
+                            <comment>Default is "sfeeds.mercent.com"</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </repricing_ftpserver>
+                        <repricing_ftpfolder translate="label">
+                            <label>FTP Folder</label>
+                            <comment>Default is "{{merchant_id}}/Feeds/"</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </repricing_ftpfolder>
+                        <repricing_ftppassword translate="label">
+                            <label>FTP Password</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </repricing_ftppassword>
+                    </fields>
+                </repricing_group>
+                <repricingschedule_group translate="label">
+                    <label>Price Optimizer Schedule</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <repricingschedule_active translate="label">
+                            <label>Enable Automation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </repricingschedule_active>
+                        <repricingschedule_time translate="label">
+                            <label>Start Time</label>
+                            <frontend_type>time</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </repricingschedule_time>
+                        <repricingschedule_frequency translate="label">
+                            <label>Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mercent_repricing/feedfrequency</source_model>
+                            <backend_model>mercent_repricing/system_config_backend_export_cron</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </repricingschedule_frequency>
+                    </fields>
+                </repricingschedule_group>
+            </groups>
+        </repricingconfig>
+    </sections>
+</config>

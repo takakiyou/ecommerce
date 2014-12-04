@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- ETeng_Cart.xml -->
+<config>
+  <modules>
+    <ETeng_Cart>
+      <active>true</active>
+      <codePool>local</codePool>
+    </ETeng_Cart>
+  </modules>
+</config>
